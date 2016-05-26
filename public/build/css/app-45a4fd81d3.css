@@ -6699,7 +6699,8 @@ form.dd-form {
   border-radius: 0;
   min-width: 8em;
   background: #81CDBC;
-  color: #ffffff; }
+  color: #ffffff;
+  border-radius: 16px; }
   .btn.dd-btn.btn-wide {
     width: 100%; }
 

@@ -52,6 +52,30 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
 
         Route::post('blog/posts/{post}/images', 'BlogPostImagesController@store');
         Route::post('blog/posts/{post}/publish', 'BlogPostsController@publish');
+
+        Route::get('categories', 'CategoriesController@index');
+        Route::get('categories/{category}', 'CategoriesController@show');
+        Route::post('categories', 'CategoriesController@store');
+        Route::get('categories/{category}/edit', 'CategoriesController@edit');
+        Route::post('categories/{category}', 'CategoriesController@update');
+        Route::delete('categories/{category}', 'CategoriesController@delete');
+
+        Route::post('categories/{category}/images', 'CategoryImagesController@store');
+
+        Route::get('products/{product}', 'ProductsController@show');
+        Route::post('categories/{category}/products', 'ProductsController@store');
+        Route::get('products/{product}/edit', 'ProductsController@edit');
+        Route::post('products/{product}', 'ProductsController@update');
+        Route::delete('products/{product}', 'ProductsController@delete');
+
+        Route::post('products/{product}/images', 'ProductImagesController@store');
+        Route::post('products/{product}/availability', 'ProductsController@setAvailability');
+
+        Route::get('products/{product}/gallery', 'ProductGalleriesController@showGalleryPage');
+        Route::get('products/{product}/gallery/images', 'ProductGalleriesController@index');
+        Route::post('products/{product}/gallery/images', 'ProductGalleriesController@store');
+
+        Route::delete('products/galleries/images/{media}', 'ProductGalleriesController@deleteImage');
     });
 
 });

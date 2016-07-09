@@ -16,7 +16,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="/admin/projects">Projects</a></li>
+                <li><a href="/admin/categories">Categories</a></li>
                 <li><a href="/admin/blog/posts">Blog</a></li>
                 @if(isset($ediblePages) && $ediblePages->count())
                     <li class="dropdown">

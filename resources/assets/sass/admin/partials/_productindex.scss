@@ -1,0 +1,37 @@
+.product-index-card {
+  margin: 2em;
+  background: $eggshell;
+  border: 2px solid $eggshell;
+
+  .product-index-card-image-box {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    vertical-align: top;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .product-index-card-details {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 30px;
+    width: 75%;
+
+    .product-index-card-name {
+      color: $primary_dark;
+      text-transform: uppercase;
+      margin-top: 0;
+    }
+
+    .product-index-card-description {
+      width: 85%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: $primary_dark;
+    }
+  }
+}

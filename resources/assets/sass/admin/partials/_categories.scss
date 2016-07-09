@@ -1,0 +1,38 @@
+.category-card {
+  width: 80%;
+  margin: 2em;
+  background: $eggshell;
+  border: 2px solid $eggshell;
+
+  .category-card-image-box {
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    vertical-align: top;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .category-card-details {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 30px;
+
+    .category-card-title {
+      text-transform: uppercase;
+      color: $primary_dark;
+      margin-top: 0;
+    }
+
+    .category-card-description {
+      width: 500px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: $primary_dark;
+    }
+  }
+}
+

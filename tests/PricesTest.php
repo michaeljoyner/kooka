@@ -28,4 +28,14 @@ class PricesTest extends TestCase
 
         $this->assertEquals('123.45', $price->asCurrencyString());
     }
+
+    /**
+     *@test
+     */
+    public function a_price_can_be_returned_as_a_float_representing_rand_and_cent_value()
+    {
+        $price = Price::fromCents(12345);
+
+        $this->assertEquals(123.45, $price->asRandCentsFloat());
+    }
 }

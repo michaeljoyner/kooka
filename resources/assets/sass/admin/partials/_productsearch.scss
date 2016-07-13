@@ -1,0 +1,62 @@
+.product-search-list {
+  list-style-type: none;
+}
+
+.product-search-card {
+  width: 90%;
+  max-width: 700px;
+  margin: 2em;
+  background: $eggshell;
+  border: 2px solid $eggshell;
+
+  .product-search-card-image-box {
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    vertical-align: top;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .product-search-card-details {
+    padding-left: 20px;
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% - 100px);
+
+    .title {
+      text-transform: uppercase;
+      color: $primary_dark;
+      text-decoration: underline;
+    }
+
+    .description {
+      width: 85%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: $primary_dark;
+    }
+  }
+
+}
+
+.product-search-container {
+
+  .input-and-go-form {
+
+    input {
+      height: 34px;
+      border-radius: 16px;
+      padding-left: 10px;
+      border: 1px solid $primary_blue;
+      width: 200px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

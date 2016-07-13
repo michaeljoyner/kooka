@@ -33,7 +33,7 @@ class Price
 
     public static function fromCents($amount)
     {
-        if(! is_int($amount)) {
+        if(! is_int(intval($amount))) {
             throw new \InvalidArgumentException('Price from cents must be an integer value');
         }
 
@@ -48,6 +48,11 @@ class Price
     public function asCurrencyString()
     {
         return money_format('%i', $this->amount/100);
+    }
+
+    public function asRandCentsFloat()
+    {
+        return ($this->amount / 100) ;
     }
 
     public function __toString()

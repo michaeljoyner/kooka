@@ -1,0 +1,8 @@
+.dd-page-header {
+  @include clearfix;
+  padding-bottom: 40px;
+
+  .header-actions {
+    margin-top: 30px;
+  }
+}

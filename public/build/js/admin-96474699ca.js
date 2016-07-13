@@ -13104,10 +13104,11 @@ Vue.component('single-upload', require('./components/Singleupload.vue'));
 Vue.component('toggle-switch', require('./components/Toggleswitch.vue'));
 Vue.component('dropzone', require('./components/Dropzone.vue'));
 Vue.component('gallery-show', require('./components/Galleryshow.vue'));
+Vue.component('product-search', require('./components/Productsearch.vue'));
 
 window.Vue = Vue;
 
-},{"./components/Dropzone.vue":16,"./components/Galleryshow.vue":17,"./components/Singleupload.vue":18,"./components/Togglebutton.vue":19,"./components/Toggleswitch.vue":20,"sweetalert":10,"vue":13,"vue-resource":12}],16:[function(require,module,exports){
+},{"./components/Dropzone.vue":16,"./components/Galleryshow.vue":17,"./components/Productsearch.vue":18,"./components/Singleupload.vue":19,"./components/Togglebutton.vue":20,"./components/Toggleswitch.vue":21,"sweetalert":10,"vue":13,"vue-resource":12}],16:[function(require,module,exports){
 var __vueify_insert__ = require("vueify/lib/insert-css")
 var __vueify_style__ = __vueify_insert__.insert("\n\n")
 'use strict';
@@ -13182,7 +13183,7 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update("_v-15959fde", module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
-},{"./Upload.js":21,"vue":13,"vue-hot-reload-api":11,"vueify/lib/insert-css":14}],17:[function(require,module,exports){
+},{"./Upload.js":22,"vue":13,"vue-hot-reload-api":11,"vueify/lib/insert-css":14}],17:[function(require,module,exports){
 var __vueify_insert__ = require("vueify/lib/insert-css")
 var __vueify_style__ = __vueify_insert__.insert("\n\n")
 'use strict';
@@ -13252,6 +13253,45 @@ if (module.hot) {(function () {  module.hot.accept()
   }
 })()}
 },{"vue":13,"vue-hot-reload-api":11,"vueify/lib/insert-css":14}],18:[function(require,module,exports){
+'use strict';
+
+module.exports = {
+    data: function data() {
+        return {
+            products: [],
+            searchTerm: ''
+        };
+    },
+    ready: function ready() {
+        this.fetchProducts();
+    },
+
+
+    methods: {
+        fetchProducts: function fetchProducts() {
+            var _this = this;
+
+            this.$http.get('/admin/products').then(function (res) {
+                return _this.$set('products', res.data);
+            }).catch(function () {
+                return console.log('unable to fetch products');
+            });
+        }
+    }
+};
+if (module.exports.__esModule) module.exports = module.exports.default
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"product-search-container\">\n    <section class=\"dd-page-header clearfix\">\n        <h1 class=\"pull-left\">Products</h1>\n        <div class=\"header-actions pull-right\">\n            <form class=\"input-and-go-form\" v-on:submit.stop.prevent=\"\">\n                <input type=\"text\" placeholder=\"Search products by name\" v-model=\"searchTerm\">\n            </form>\n        </div>\n    </section>\n    <section class=\"products-index\">\n        <ul class=\"product-search-list\">\n            <li v-for=\"product in products | orderBy 'name' | filterBy searchTerm in 'name'\">\n                <a href=\"/admin/products/@{{ product.id }}\">\n                    <div class=\"product-search-card\">\n                        <div class=\"product-search-card-image-box\">\n                            <img :src=\"product.thumb_src\" alt=\"\">\n                        </div>\n                        <div class=\"product-search-card-details\">\n                            <p class=\"title\">{{ product.name }}</p>\n                            <p class=\"description\">{{ product.description }}</p>\n                        </div>\n                    </div>\n                </a>\n            </li>\n        </ul>\n    </section>\n</div>\n"
+if (module.hot) {(function () {  module.hot.accept()
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  if (!module.hot.data) {
+    hotAPI.createRecord("_v-a831d4b8", module.exports)
+  } else {
+    hotAPI.update("_v-a831d4b8", module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
+  }
+})()}
+},{"vue":13,"vue-hot-reload-api":11}],19:[function(require,module,exports){
 var __vueify_insert__ = require("vueify/lib/insert-css")
 var __vueify_style__ = __vueify_insert__.insert("\n\n")
 'use strict';
@@ -13361,7 +13401,7 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update("_v-3eb4848c", module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
-},{"vue":13,"vue-hot-reload-api":11,"vueify/lib/insert-css":14}],19:[function(require,module,exports){
+},{"vue":13,"vue-hot-reload-api":11,"vueify/lib/insert-css":14}],20:[function(require,module,exports){
 var __vueify_insert__ = require("vueify/lib/insert-css")
 var __vueify_style__ = __vueify_insert__.insert("\n\n")
 'use strict';
@@ -13424,7 +13464,7 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update("_v-32367549", module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
-},{"vue":13,"vue-hot-reload-api":11,"vueify/lib/insert-css":14}],20:[function(require,module,exports){
+},{"vue":13,"vue-hot-reload-api":11,"vueify/lib/insert-css":14}],21:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -13477,7 +13517,7 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update("_v-0824344b", module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
-},{"vue":13,"vue-hot-reload-api":11}],21:[function(require,module,exports){
+},{"vue":13,"vue-hot-reload-api":11}],22:[function(require,module,exports){
 "use strict";
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();

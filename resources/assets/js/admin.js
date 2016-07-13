@@ -13,5 +13,6 @@ Vue.component('single-upload', require('./components/Singleupload.vue'));
 Vue.component('toggle-switch', require('./components/Toggleswitch.vue'));
 Vue.component('dropzone', require('./components/Dropzone.vue'));
 Vue.component('gallery-show', require('./components/Galleryshow.vue'));
+Vue.component('product-search', require('./components/Productsearch.vue'));
 
 window.Vue = Vue;

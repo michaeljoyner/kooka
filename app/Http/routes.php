@@ -32,6 +32,12 @@ Route::post('admin/password/reset', 'Auth\PasswordController@reset');
 Route::get('admin/users/password/reset', 'Auth\PasswordController@showLoggedInUserPasswordReset');
 Route::post('admin/users/password/reset', 'Auth\PasswordController@loggedInUserReset');
 
+//Shopping cart routes
+Route::get('cart/index', 'ShoppingCartController@index');
+Route::get('cart/summary', 'ShoppingCartController@summary');
+Route::post('cart/add', 'ShoppingCartController@add');
+Route::patch('cart/update', 'ShoppingCartController@update');
+Route::delete('cart/remove', 'ShoppingCartController@remove');
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
 
@@ -61,6 +67,9 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
         Route::delete('categories/{category}', 'CategoriesController@delete');
 
         Route::post('categories/{category}/images', 'CategoryImagesController@store');
+
+        Route::get('products', 'ProductsSearchController@index');
+        Route::get('products/app', 'ProductsSearchController@showApp');
 
         Route::get('products/{product}', 'ProductsController@show');
         Route::post('categories/{category}/products', 'ProductsController@store');

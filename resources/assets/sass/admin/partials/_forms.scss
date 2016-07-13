@@ -22,3 +22,14 @@ form.dd-form {
     margin: 0 auto;
   }
 }
+
+.input-and-go-form {
+
+  input {
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+}

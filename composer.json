@@ -12,7 +12,8 @@
     "laravel/framework": "5.2.*",
     "laravelcollective/html": "^5.2",
     "spatie/laravel-medialibrary": "^3.17",
-    "cviebrock/eloquent-sluggable": "^4.0.2"
+    "cviebrock/eloquent-sluggable": "^4.0.2",
+    "gloudemans/shoppingcart": "~1.3"
   },
   "require-dev": {
     "fzaninotto/faker": "~1.4",

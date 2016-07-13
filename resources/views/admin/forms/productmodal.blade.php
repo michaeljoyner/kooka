@@ -17,7 +17,10 @@
                 </div>
                 <div class="form-group">
                     <label for="price">Price: </label>
-                    {!! Form::text('price', null, ['class' => "form-control", 'placeholder' => 'As rand value, e.g. 125.00']) !!}
+                    <div class="input-group">
+                        <div class="input-group-addon">R</div>
+                        {!! Form::text('price', null, ['class' => "form-control", 'placeholder' => 'As rand value, e.g. 125.00']) !!}
+                    </div>
                 </div>
             </div>
             <div class="modal-footer">

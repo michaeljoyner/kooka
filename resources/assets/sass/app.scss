@@ -12,6 +12,7 @@ $font-family-sans-serif: 'Lato', "Helvetica Neue", Helvetica, Arial, sans-serif;
 @import "vendor/sweetalert";
 @import "admin/partials/navbar";
 @import "admin/partials/forms";
+@import "admin/partials/pageheader";
 @import "admin/partials/buttons";
 @import "admin/partials/usercard";
 @import "admin/partials/blogposteditior";
@@ -22,6 +23,7 @@ $font-family-sans-serif: 'Lato', "Helvetica Neue", Helvetica, Arial, sans-serif;
 @import "admin/partials/productindex";
 @import "admin/partials/toggleswitch";
 @import "admin/partials/gallery";
+@import "admin/partials/productsearch";
 
 a, a:hover, a:visited, a:focus, a:active {
   color: inherit;

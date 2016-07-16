@@ -1,0 +1,17 @@
+.categories-container {
+  display: flex;
+  max-width: 800px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+
+  .category-card {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 30%;
+    margin: 8px;
+
+    img {
+      width: 100%;
+    }
+  }
+}

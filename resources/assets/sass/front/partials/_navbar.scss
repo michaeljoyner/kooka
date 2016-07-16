@@ -1,0 +1,44 @@
+.main-navbar {
+  display: flex;
+  height: 70px;
+  font-size: 1.5em;
+
+  & > * {
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+
+  .branding-strip {
+    flex-basis: 50%;
+    //font-size: 2em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+  }
+
+  .nav-list {
+    flex-basis: 50%;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+
+    .nav-link {
+      flex-shrink: 1;
+      flex-grow: 1;
+      flex-basis: 33%;
+      background: $brand_green_soft;
+      //font-size: 2em;
+      text-transform: uppercase;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:nth-child(2) {
+        background: $brand_orange;
+      }
+    }
+  }
+}

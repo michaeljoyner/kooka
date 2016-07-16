@@ -4,6 +4,7 @@ namespace App\Stock;
 
 use App\HasModelImage;
 use Cviebrock\EloquentSluggable\Sluggable;
+use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
@@ -11,7 +12,7 @@ use Spatie\MediaLibrary\HasMedia\Interfaces\HasMediaConversions;
 
 class Category extends Model implements HasMediaConversions
 {
-    use Sluggable, SoftDeletes, HasMediaTrait, HasModelImage;
+    use Sluggable, SluggableScopeHelpers, SoftDeletes, HasMediaTrait, HasModelImage;
 
     protected $table = 'categories';
 

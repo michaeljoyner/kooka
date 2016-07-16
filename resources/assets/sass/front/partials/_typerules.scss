@@ -1,0 +1,46 @@
+.text-green-soft {
+  color: $brand_green_soft;
+}
+
+.text-green-hard {
+  color: $brand_green_dark;
+}
+
+.text-orange {
+  color: $brand_orange;
+}
+
+.text-dark {
+  color: $brand_dark;
+}
+
+.main-heading {
+  font-family: $primary_font;
+  font-weight: 700;
+  font-size: 2.375em;
+  text-transform: uppercase;
+}
+
+.sub-heading {
+  font-family: $primary_font;
+  font-weight: 700;
+  font-size: 1.56em;
+  text-transform: uppercase;
+}
+
+.small-heading {
+  font-family: $primary_font;
+  font-weight: 700;
+  font-size: 1.25em;
+  text-transform: uppercase;
+}
+
+.body-text {
+  font-family: $primary_font;
+  font-weight: 400;
+  font-size: 1.25em;
+}
+
+.centered-text {
+  text-align: center;
+}

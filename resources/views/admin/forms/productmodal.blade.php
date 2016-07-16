@@ -9,7 +9,7 @@
                 {!! Form::open(['url' => '/admin/categories/' . $category->id . '/products', 'class' => 'form-horizontal dd-form modal-form']) !!}
                 <div class="form-group">
                     <label for="title">Name: </label>
-                    {!! Form::text('name', null, ['class' => "form-control", 'placeholder' => 'Category name', 'required']) !!}
+                    {!! Form::text('name', null, ['class' => "form-control", 'placeholder' => 'Product name', 'required']) !!}
                 </div>
                 <div class="form-group">
                     <label for="description">Description: </label>

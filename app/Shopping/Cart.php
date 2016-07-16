@@ -22,7 +22,10 @@ class Cart
 
     public function update($productId, $quantity)
     {
-        ShoppingCart::update($this->getRowIDfromProductId($productId), $quantity);
+        $rowId = $this->getRowIDfromProductId($productId);
+        ShoppingCart::update($rowId, $quantity);
+
+        return ShoppingCart::get($rowId);
     }
 
     public function remove($productId)

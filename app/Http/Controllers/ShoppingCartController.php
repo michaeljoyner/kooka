@@ -28,7 +28,8 @@ class ShoppingCartController extends Controller
                 'name' => $item->name,
                 'quantity' => $item->qty,
                 'price' => $item->price,
-                'subtotal' => $item->subtotal
+                'subtotal' => $item->subtotal,
+                'thumb' => Product::findOrFail($item->id)->imageSrc('thumb')
             ];
         })->values();
     }
@@ -61,9 +62,14 @@ class ShoppingCartController extends Controller
             'quantity' => 'required|integer|between:0,100'
         ]);
 
-        $this->cart->update($request->get('id'), $request->quantity);
+        $item = $this->cart->update($request->get('id'), $request->quantity);
 
-        return response()->json('ok');
+        return response()->json([
+            'id' => $item->id,
+            'quantity' => $item->qty,
+            'subtotal' => $item->subtotal
+        ]);
+
     }
 
     public function remove(Request $request)

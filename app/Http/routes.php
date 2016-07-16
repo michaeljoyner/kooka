@@ -11,10 +11,11 @@
 |
 */
 
-
-Route::get('/', function () {
-    return view('welcome');
-});
+// Page routes
+Route::get('/', 'PagesController@home');
+Route::get('categories/{slug}', 'PagesController@category');
+Route::get('products/{slug}', 'PagesController@product');
+Route::get('/cart', 'PagesController@cart');
 
 // Authentication Routes...
 Route::get('admin/login', 'Auth\AuthController@showLoginForm');

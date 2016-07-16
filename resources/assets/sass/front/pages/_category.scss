@@ -1,0 +1,29 @@
+.category-products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  .product-summary-card {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 30%;
+    margin: 20px 8px;
+
+    img {
+      max-width: 200px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .product-summary-card-price {
+      background: $brand_orange;
+      color: $brand_green_dark;
+      display: block;
+      width: 7em;
+      text-align: center;
+      margin: 0 auto;
+      padding: 4px 8px;
+      border-radius: 5px;
+    }
+  }
+}

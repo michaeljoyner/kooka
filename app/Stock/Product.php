@@ -53,6 +53,11 @@ class Product extends Model implements HasMediaConversions
         ];
     }
 
+    public function category()
+    {
+        return $this->belongsTo(Category::class, 'category_id');
+    }
+
     public function updateFromUserInput($attributes)
     {
         return $this->update([

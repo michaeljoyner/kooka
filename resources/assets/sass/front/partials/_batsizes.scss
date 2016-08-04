@@ -1,0 +1,129 @@
+.bat-sizes {
+  background: $brand_green_soft;
+  @include respond-to(phone) { min-height: 720px; overflow-x: hidden;}
+
+  .main-heading {
+    color: $white;
+  }
+
+  .mobile-table-key {
+    display: none;
+
+    @include respond-to(phone) {
+      display: block;
+      color: $brand_green_dark;
+      font-size: 80%;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: -20px;
+      padding-bottom: 20px;
+
+      span {
+        display: inline-block;
+        padding: 10px 20px;
+      }
+    }
+  }
+}
+
+.bat-size-table {
+  width: 95%;
+  max-width: 900px;
+  margin: 0 auto;
+
+  @include respond-to(phone) {transform: rotate(-90deg) translate3d(-50px,0,0);}
+
+  .bat-img-row {
+    @include respond-to(phone) {transform: translate3d(0,-20px,0); opacity: .2;}
+  }
+  
+  .label-row {
+    padding-top: 10px;
+    height: 30px;
+    td {
+      color: $brand_green_dark;
+      font-size: 80%;
+      text-transform: uppercase;
+      text-align: center;
+
+      @include respond-to(phone) {color: transparent;}
+    }
+
+
+  }
+
+  td {
+    text-align: center;
+  }
+
+  .first-col {
+    width: 165px;
+    text-transform: uppercase;
+    text-align: right;
+    color: $white;
+  }
+
+  .info-row {
+    line-height: 2;
+    color: $white;
+
+    td {
+      @include respond-to(phone) {
+        transform: rotate(90deg) translate3d(-200px,0,0);
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .bat-size-bat {
+
+    img {
+      width: 30px;
+      transform-origin: bottom;
+    }
+  }
+
+  .bat-size-bat-1 img {
+    transform: scale(.82);
+  }
+
+  .bat-size-bat-2 img {
+    transform: scale(.84);
+  }
+
+  .bat-size-bat-3 img {
+    transform: scale(.86);
+  }
+
+  .bat-size-bat-4 img {
+    transform: scale(.88);
+  }
+
+  .bat-size-bat-5 img {
+    transform: scale(.9);
+  }
+
+  .bat-size-bat-6 img {
+    transform: scale(.92);
+  }
+
+  .bat-size-bat-7 img {
+    transform: scale(.94);
+  }
+
+  .bat-size-bat-8 img {
+    transform: scale(.96);
+  }
+
+  .bat-size-bat-9 img {
+    transform: scale(0.98);
+  }
+
+  .bat-size-bat-10 img {
+    transform: scale(1);
+  }
+
+  .bat-size-bat-11 img {
+    transform: scale(1.02);
+  }
+}

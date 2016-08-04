@@ -1,0 +1,112 @@
+.checkout-container {
+  display: flex;
+  flex-wrap: nowrap;
+
+  @include respond-to(phone) {flex-direction: column;}
+  @include respond-to(smalltablet) {flex-direction: column;}
+}
+
+.checkout-help {
+  display: inline-block;
+  padding: 0 20px 0 20px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 25%;
+  order: 5;
+
+  @include respond-to(phone) {flex-basis: auto;}
+  @include respond-to(smalltablet) {flex-basis: auto;}
+
+  h2 {
+    padding-bottom: 20px;
+    border-bottom: 1px solid $brand_green_soft;
+  }
+}
+
+.checkout-main {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 75%;
+  order: 5;
+
+  @include respond-to(phone) {flex-basis: auto; order: 1;}
+  @include respond-to(smalltablet) {flex-basis: auto; order: 1;}
+}
+
+.checkout-order-table {
+  width: 95%;
+  max-width: 700px;
+  margin: 0 auto;
+
+  thead tr th {
+    text-align: left;
+    color: $brand_green_soft;
+  }
+
+  tfoot tr {
+    th {
+      text-align: left;
+      color: $brand_green_soft;
+    }
+
+    .foot-heading {
+      text-align: right;
+      padding-right: 40px;
+      color: $brand_green_soft;
+    }
+  }
+}
+
+.customer-form {
+  width: 95%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 0;
+
+  .form-group {
+    padding: 5px 0;
+  }
+
+  label {
+    text-transform: uppercase;
+    font-size: 80%;
+    color: $brand_green_dark;
+  }
+
+  input {
+    width: 100%;
+    height: 34px;
+    display: inline-block;
+    border: 1px solid $brand_green_dark;
+    padding-left: 5px;
+    font-size: 1em;
+  }
+
+  textarea {
+    width: 100%;
+    display: inline-block;
+    resize: none;
+    height: 120px;
+    border: 1px solid $brand_green_dark;
+    padding: 10px;
+    font-size: 1em;
+  }
+
+  .checkout-button {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    border: 0;
+    background: $brand_green_soft;
+    color: $white;
+    text-transform: uppercase;
+    height: 34px;
+    line-height: 34px;
+    font-size: 1em;
+    padding: 0;
+
+    &:hover {
+      background: $brand_green_dark;
+    }
+  }
+}

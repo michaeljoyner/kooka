@@ -1,17 +1,23 @@
 <nav class="main-navbar">
     <div class="branding-strip">
-        <span class="text-orange">Kookaburra</span><span class="text-green-soft">Direct.co.za</span>
+        <a href="/"><span class="text-blue">Kookaburra</span><span class="text-green-soft">Direct.co.za</span></a>
     </div>
     <ul class="nav-list">
-        <li class="nav-link">
-            <a href="#">Shop</a>
-        </li>
-        <li class="nav-link">
-            <a href="#">Contact</a>
-        </li>
-        <li class="nav-link" id="cart-nav-link">
-            <a href="/cart">Cart</a>
-        </li>
+        <a href="/#categories" class="nav-link">
+            <li>
+                Shop
+            </li>
+        </a>
+        <a href="/#contact" class="nav-link">
+            <li>
+                Contact
+            </li>
+        </a>
+        <a href="/cart" class="nav-link">
+            <li>
+                Cart
+            </li>
+        </a>
         @include('front.partials.cartalert')
     </ul>
 </nav>

@@ -116,14 +116,16 @@ class ShoppingCartControllerTest extends TestCase
                 'name' => 'Ultrathon 3000',
                 'quantity' => 3,
                 'price' => 10.00,
-                'subtotal' => 30.00
+                'subtotal' => 30.00,
+                'thumb' => '/images/assets/default.jpg'
             ],
             [
                 'id' => $product2->id,
                 'name' => 'SledgeHammer XL',
                 'quantity' => 1,
                 'price' => 20.00,
-                'subtotal' => 20.00
+                'subtotal' => 20.00,
+                'thumb' => '/images/assets/default.jpg'
             ]
         ];
 

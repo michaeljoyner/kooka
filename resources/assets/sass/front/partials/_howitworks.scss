@@ -1,0 +1,53 @@
+.how-it-works-container {
+
+  max-width: 1000px;
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+
+  @include respond-to(phone) { flex-wrap: wrap; }
+  @include respond-to(smalltablet) { flex-wrap: wrap; }
+
+  .how-it-works {
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include respond-to(phone) { flex-basis: 50%; }
+    @include respond-to(smalltablet) { flex-basis: 50%; }
+
+    svg {
+      width: 40%;
+      display: block;
+      margin: 0 auto;
+      fill: $brand_green_dark;
+      stroke: $brand_green_dark;
+
+      * {
+        //fill: $brand_green_dark;
+        stroke: $brand_green_dark;
+      }
+
+      .cls-2 {
+        fill: $brand_green_dark;
+        stroke: $brand_green_dark;
+      }
+    }
+
+    p {
+      text-align: center;
+      padding-top: 20px;
+      line-height: 1.6;
+    }
+
+    &:nth-child(3) svg {
+      padding-top: 15%;
+      width: 60%;
+    }
+  }
+}

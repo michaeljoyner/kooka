@@ -2,6 +2,8 @@
 
 namespace App\Stock;
 
+use App\Breadcrumbs\Breadcrumbable;
+use App\Breadcrumbs\BreadcrumbsTrait;
 use App\HasModelImage;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
@@ -9,16 +11,17 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 use Spatie\MediaLibrary\HasMedia\Interfaces\HasMediaConversions;
 
-class Product extends Model implements HasMediaConversions
+class Product extends Model implements HasMediaConversions, Breadcrumbable
 {
-    use Sluggable, SoftDeletes, HasMediaTrait, HasModelImage;
+    use Sluggable, SoftDeletes, HasMediaTrait, HasModelImage, BreadcrumbsTrait;
 
     protected $table = 'products';
 
     protected $dates = ['deleted_at'];
 
     protected $casts = [
-        'available' => 'boolean'
+        'available' => 'boolean',
+        'promoted' => 'boolean'
     ];
 
     protected $fillable = [
@@ -27,6 +30,13 @@ class Product extends Model implements HasMediaConversions
         'writeup',
         'price',
         'available'
+    ];
+
+    protected $breadcrumbs = [
+        'parent' => 'category',
+        'unique' => 'slug',
+        'base_url' => '/products/',
+        'build_name_from' => 'name'
     ];
 
     public function registerMediaConversions()
@@ -109,5 +119,22 @@ class Product extends Model implements HasMediaConversions
     public function clearGallery()
     {
         $this->getGallery()->clearMediaCollection();
+    }
+
+    public function promote()
+    {
+        $this->promoted = true;
+        return $this->save();
+    }
+
+    public function demote()
+    {
+        $this->promoted = false;
+        return $this->save();
+    }
+
+    public function isPromoted()
+    {
+        return $this->promoted;
     }
 }

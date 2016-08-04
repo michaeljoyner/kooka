@@ -6,6 +6,22 @@
   min-height: 500px;
   width: 100%;
   background: #a8a8a8;
+  background-image: url(../../images/assets/kookaburra_banner.png);
+  background-size: cover;
+
+  .logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 600px;
+    width: 90%;
+    padding-top: 38px;
+    padding-bottom: 20px;
+  }
+
+  .tagline {
+    text-align: center;
+    color: $brand_green_dark;
+  }
 }
 
 .home-section.top-sellers {

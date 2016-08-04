@@ -13,7 +13,7 @@
         <section class="products-index">
             <ul class="product-search-list">
                 <li v-for="product in products | orderBy 'name' | filterBy searchTerm in 'name'">
-                    <a href="/admin/products/@{{ product.id }}">
+                    <a href="/admin/products/{{ product.id }}">
                         <div class="product-search-card">
                             <div class="product-search-card-image-box">
                                 <img :src="product.thumb_src" alt="">

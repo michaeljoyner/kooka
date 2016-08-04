@@ -1,6 +1,15 @@
 .cart-item {
   max-width: 800px;
+  width: 90%;
   margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  clear: both;
+  flex-wrap: nowrap;
+
+  @include respond-to(phone) { flex-wrap: wrap; background: $eggshell; padding: 5px; }
+
   .cart-item-thumb-box {
     display: inline-block;
     vertical-align: top;
@@ -18,12 +27,16 @@
     display: inline-block;
     vertical-align: top;
     width: 40%;
+
+    @include respond-to(phone) { flex-basis: 70%; width: auto; text-align: right; padding-right: 10px;}
   }
 
   .cart-item-qty-box {
     display: inline-block;
     vertical-align: top;
     width: 20%;
+
+    @include respond-to(phone) { flex-basis: auto; width: auto; }
 
     .number {
       display: inline-block;
@@ -39,6 +52,7 @@
       border: 0;
       height: 34px;
       vertical-align: top;
+      text-transform: uppercase;
     }
 
     .cart-edit-btn {
@@ -47,8 +61,8 @@
     }
 
     .cart-save-btn {
-      background: $brand_orange;
-      color: $brand_green_dark;
+      background: $brand_green_dark;
+      color: $white;
     }
   }
 
@@ -56,11 +70,67 @@
     display: inline-block;
     vertical-align: top;
     width: 20%;
+
+    @include respond-to(phone) { flex-basis: auto; width: auto; }
   }
 
   .cart-item-trash {
     display: inline-block;
     vertical-align: top;
     width: 60px;
+
+    @include respond-to(phone) { flex-basis: auto; width: auto; }
+
+    button {
+      border: 0;
+      background: transparent;
+    }
+
+    svg {
+      fill: $danger;
+    }
   }
+}
+
+.cart-list {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+
+  .checkout-button {
+    display: inline-block;
+    border: 0;
+    background: $brand_green_soft;
+    color: $white;
+    text-transform: uppercase;
+    height: 34px;
+    vertical-align: top;
+    float: right;
+    margin-right: 30px;
+    padding: 0 10px;
+    line-height: 34px;
+    margin-top: 40px;
+
+    &:hover {
+      background: $brand_green_dark;
+    }
+  }
+}
+
+.cart-help {
+  max-width: 800px;
+  width: 95%;
+  margin: 0 auto;
+  padding: 50px 0;
+  border-top: 1px solid $brand_green_dark;
+  margin-top: 50px;
 }

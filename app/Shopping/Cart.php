@@ -33,6 +33,11 @@ class Cart
         ShoppingCart::remove($this->getRowIDfromProductId($productId));
     }
 
+    public function emptyContents()
+    {
+        ShoppingCart::destroy();
+    }
+
     protected function getRowIDfromProductId($productId)
     {
         $rowId = collect(ShoppingCart::search(['id' => $productId]))->first();

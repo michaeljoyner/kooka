@@ -1,7 +1,11 @@
 .main-navbar {
   display: flex;
-  height: 70px;
-  font-size: 1.5em;
+  height: 50px;
+  font-size: 1.3em;
+  border-bottom: 3px solid $brand_green_dark;
+
+  @include respond-to(phone) {flex-direction: column; height: 80px;}
+  @include respond-to(smalltablet) {flex-direction: column; height: 80px;}
 
   & > * {
     flex-grow: 1;
@@ -23,6 +27,7 @@
     padding: 0;
     margin: 0;
     height: 100%;
+    list-style-type: none;
 
     .nav-link {
       flex-shrink: 1;
@@ -35,9 +40,16 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      color: $white;
+      border-left: 1px solid $brand_green_dark;
 
-      &:nth-child(2) {
-        background: $brand_orange;
+      &:hover {
+        background: $brand_green_dark;
+      }
+
+      &:nth-child(1) {
+        //background: $brand_green_dark;
+        border-left: none;
       }
     }
   }

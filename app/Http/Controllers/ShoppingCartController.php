@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Shopping\Cart;
+use App\Stock\Price;
 use App\Stock\Product;
 use Illuminate\Http\Request;
 
@@ -23,13 +24,14 @@ class ShoppingCartController extends Controller
     public function index()
     {
         return $this->cart->items()->map(function($item) {
+            $product = Product::findOrFail($item->id);
             return [
-                'id' => $item->id,
-                'name' => $item->name,
+                'id' => $product->id,
+                'name' => $product->name,
                 'quantity' => $item->qty,
-                'price' => $item->price,
-                'subtotal' => $item->subtotal,
-                'thumb' => Product::findOrFail($item->id)->imageSrc('thumb')
+                'price' => $product->price,
+                'subtotal' => Price::fromCents($product->price->inCents() * $item->qty)->asCurrencyString(),
+                'thumb' => $product->imageSrc('thumb')
             ];
         })->values();
     }

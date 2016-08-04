@@ -37,6 +37,14 @@
                                toggle-url="/admin/products/{{ $product->id }}/availability"
                                toggle-attribute="available"
                 ></toggle-switch>
+                <p class="lead">Promote this product?</p>
+                <toggle-switch identifier="2"
+                               true-label="yes"
+                               false-label="no"
+                               :initial-state="{{ $product->isPromoted() ? 'true' : 'false' }}"
+                               toggle-url="/admin/products/{{ $product->id }}/promote"
+                               toggle-attribute="promote"
+                ></toggle-switch>
             </div>
             <div class="category-img-box single-image-uploader-box">
                 <single-upload default="{{ $product->imageSrc() }}"

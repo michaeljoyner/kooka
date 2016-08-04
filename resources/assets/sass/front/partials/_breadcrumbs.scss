@@ -1,0 +1,33 @@
+.breadcrumbs {
+  height: 70px;
+  display: flex;
+  align-content: center;
+  padding-left: 20px;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    .breadcrumb {
+      color: $text_grey;
+      text-transform: uppercase;
+      display: inline-block;
+
+      &:not(:nth-child(1)):before {
+        content: '>>';
+        color: $text_grey;
+        display: inline-block;
+        padding: 5px;
+      }
+
+      &:hover {
+        color: $brand_green_dark;
+      }
+
+      a, a:visited, a:focus, a:hover {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+}

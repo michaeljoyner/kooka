@@ -1,6 +1,6 @@
 .categories-container {
   display: flex;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   flex-wrap: wrap;
 
@@ -10,8 +10,26 @@
     flex-basis: 30%;
     margin: 8px;
 
-    img {
-      width: 100%;
-    }
+
+  }
+}
+
+.category-card {
+  padding: 10px;
+  img {
+    width: 100%;
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .small-heading {
+    text-transform: uppercase;
+    text-align: center;
+    color: $brand_green_dark;
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 5px $brand_green_soft;
   }
 }

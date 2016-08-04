@@ -112,4 +112,21 @@ class ProductsControllerTest extends TestCase
         $product = Product::find($product->id);
         $this->assertTrue($product->available);
     }
+
+    /**
+     *@test
+     */
+    public function a_product_can_be_promoted_or_demoted_by_posting_to_an_endpoint()
+    {
+        $this->asLoggedInUser();
+        $product = factory(Product::class)->create();
+
+        $response = $this->call('POST', '/admin/products/' . $product->id . '/promote', [
+            'promote' => true
+        ]);
+        $this->assertEquals(200, $response->status());
+
+        $product = Product::find($product->id);
+        $this->assertTrue($product->isPromoted());
+    }
 }

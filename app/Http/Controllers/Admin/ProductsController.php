@@ -82,4 +82,13 @@ class ProductsController extends Controller
 
         return response()->json(['new_state' => $newState]);
     }
+
+    public function setPromoted(Request $request, Product $product)
+    {
+        $this->validate($request, ['promote' => 'required|boolean']);
+
+        $request->promote ? $product->promote() : $product->demote();
+
+        return response()->json(['new_state' => $product->isPromoted()]);
+    }
 }

@@ -1,13 +1,30 @@
+.category-products {
+  border-top: 1px solid $brand_green_soft;
+}
+
 .category-products-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto;
+  //justify-content: space-around;
+  padding-bottom: 40px;
+
+  @include respond-to(phone) {justify-content: center;}
 
   .product-summary-card {
-    flex-grow: 1;
+    flex-grow: 0;
     flex-shrink: 1;
-    flex-basis: 30%;
-    margin: 20px 8px;
+    flex-basis: 33%;
+    padding: 20px 8px;
+    max-width: 300px;
+
+    @include respond-to(phone) {flex-grow: 1;}
+
+    &:hover {
+      box-shadow: 0px 0px 5px $brand_green_soft;
+    }
 
     img {
       max-width: 200px;
@@ -16,14 +33,14 @@
     }
 
     .product-summary-card-price {
-      background: $brand_orange;
+      background: $white;
       color: $brand_green_dark;
+      border: 2px solid $brand_green_dark;
       display: block;
       width: 7em;
       text-align: center;
       margin: 0 auto;
       padding: 4px 8px;
-      border-radius: 5px;
     }
   }
 }

@@ -2,6 +2,8 @@
 
 namespace App\Stock;
 
+use App\Breadcrumbs\Breadcrumbable;
+use App\Breadcrumbs\BreadcrumbsTrait;
 use App\HasModelImage;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
@@ -10,15 +12,22 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 use Spatie\MediaLibrary\HasMedia\Interfaces\HasMediaConversions;
 
-class Category extends Model implements HasMediaConversions
+class Category extends Model implements HasMediaConversions, Breadcrumbable
 {
-    use Sluggable, SluggableScopeHelpers, SoftDeletes, HasMediaTrait, HasModelImage;
+    use Sluggable, SluggableScopeHelpers, SoftDeletes, HasMediaTrait, HasModelImage, BreadcrumbsTrait;
 
     protected $table = 'categories';
 
     protected $fillable = [
         'name',
         'description'
+    ];
+
+    protected $breadcrumbs = [
+        'parent' => null,
+        'unique' => 'slug',
+        'base_url' => '/categories/',
+        'build_name_from' => 'name'
     ];
 
     public function registerMediaConversions()

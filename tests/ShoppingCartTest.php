@@ -72,4 +72,19 @@ class ShoppingCartTest extends TestCase
 
         $this->assertEquals('50.00', $cart->totalPrice());
     }
+
+    /**
+     *@test
+     */
+    public function the_cart_can_be_emptied()
+    {
+        $cart = new Cart();
+        $cart->add(factory(Product::class)->create(['price' => 1000]), 1);
+        $cart->add(factory(Product::class)->create(['price' => 2000]), 2);
+
+        $this->assertCount(2, $cart->items());
+
+        $cart->emptyContents();
+        $this->assertCount(0, $cart->items());
+    }
 }

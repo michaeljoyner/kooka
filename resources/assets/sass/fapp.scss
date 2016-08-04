@@ -4,6 +4,7 @@
 @import "mixins/media";
 
 @import "vendor/sweetalert";
+@import "vendor/slick";
 
 @import "front/partials/layout";
 @import "front/partials/typerules";
@@ -11,9 +12,15 @@
 @import "front/partials/footer";
 @import "front/partials/cartalert";
 @import "front/partials/spinner";
+@import "front/partials/breadcrumbs";
 
 @import "front/pages/home";
 @import "front/partials/homecategories";
+@import "front/partials/slider";
+@import "front/partials/howitworks";
+@import "front/partials/batsizes";
+@import "front/partials/contactform";
+@import "front/partials/contactpanel";
 
 @import "front/pages/category";
 
@@ -21,5 +28,7 @@
 @import "front/partials/addtocart";
 
 @import "front/partials/cartitem";
+
+@import "front/pages/checkout";
 
 @import "front/partials/base";

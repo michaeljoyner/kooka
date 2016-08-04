@@ -1,0 +1,1 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137.36 137.36"><title>fb_icon</title><rect width="137.36" height="137.36" rx="20.9" ry="20.9"/><path d="M85.26,38.39H74.86s-14.4-1.28-14.4,13.9v8.12H52.23l0,8.23H60.4l.06,33h11v-33H82.2l3.13-8.23H71.46V53.47s-.11-4,4.56-4h9.15Z"/></svg>

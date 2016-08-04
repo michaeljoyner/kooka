@@ -11,7 +11,10 @@
   },
   "dependencies": {
     "laravel-elixir-vueify": "^1.0.3",
+    "lory.js": "^2.1.0",
     "sweetalert": "^1.1.3",
-    "vue-resource": "^0.9.3"
+    "vue-m-carousel": "^1.0.6",
+    "vue-resource": "^0.9.3",
+    "wallop": "^2.2.4"
   }
 }

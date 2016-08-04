@@ -16,6 +16,12 @@ Route::get('/', 'PagesController@home');
 Route::get('categories/{slug}', 'PagesController@category');
 Route::get('products/{slug}', 'PagesController@product');
 Route::get('/cart', 'PagesController@cart');
+Route::get('/checkout', 'PagesController@checkout');
+Route::post('/checkout', 'CheckoutController@doCheckout');
+
+Route::post('/contact', 'ContactFormController@handleMessage');
+
+Route::get('api/products/{product}/images', 'ProductImagesController@index');
 
 // Authentication Routes...
 Route::get('admin/login', 'Auth\AuthController@showLoginForm');
@@ -80,12 +86,19 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
 
         Route::post('products/{product}/images', 'ProductImagesController@store');
         Route::post('products/{product}/availability', 'ProductsController@setAvailability');
+        Route::post('products/{product}/promote', 'ProductsController@setPromoted');
 
         Route::get('products/{product}/gallery', 'ProductGalleriesController@showGalleryPage');
         Route::get('products/{product}/gallery/images', 'ProductGalleriesController@index');
         Route::post('products/{product}/gallery/images', 'ProductGalleriesController@store');
 
         Route::delete('products/galleries/images/{media}', 'ProductGalleriesController@deleteImage');
+
+        Route::get('orders', 'OrdersController@index');
+        Route::get('orders/archived', 'OrdersController@archivesIndex');
+        Route::get('orders/{order}', 'OrdersController@show');
+        Route::delete('orders/{order}', 'OrdersController@delete');
+        Route::post('orders/{order}/archive', 'OrdersController@current');
     });
 
 });

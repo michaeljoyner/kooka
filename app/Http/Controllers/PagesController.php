@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Shopping\Cart;
 use App\Stock\Category;
 use App\Stock\Product;
 use Illuminate\Http\Request;
@@ -13,7 +14,8 @@ class PagesController extends Controller
     public function home()
     {
         $categories = Category::all();
-        return view('front.pages.home')->with(compact('categories'));
+        $topSellers = Product::all();
+        return view('front.pages.home')->with(compact('categories', 'topSellers'));
     }
 
     public function category($slug)
@@ -33,5 +35,12 @@ class PagesController extends Controller
     public function cart()
     {
         return view('front.pages.cart');
+    }
+
+    public function checkout(Cart $cart)
+    {
+        $orderedItems = $cart->items()->values();
+        $cart_subtotal = $cart->totalPrice();
+        return view('front.pages.checkout')->with(compact('orderedItems', 'cart_subtotal'));
     }
 }

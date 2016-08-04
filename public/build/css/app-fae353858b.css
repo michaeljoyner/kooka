@@ -6807,6 +6807,15 @@ form.dd-form {
   .product-search-container .input-and-go-form input:focus {
     outline: none; }
 
+.order-items-list {
+  padding: 30px 15px;
+  background: #e1ecef; }
+  .order-items-list tfoot {
+    text-transform: uppercase; }
+
+.order-status-switch-box {
+  text-align: center; }
+
 a, a:hover, a:visited, a:focus, a:active {
   color: inherit;
   text-decoration: none; }

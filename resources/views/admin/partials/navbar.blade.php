@@ -18,7 +18,7 @@
             <ul class="nav navbar-nav">
                 <li><a href="/admin/products/app">Products</a></li>
                 <li><a href="/admin/categories">Categories</a></li>
-                <li><a href="/admin/blog/posts">Blog</a></li>
+                <li><a href="/admin/orders">Orders</a></li>
                 @if(isset($ediblePages) && $ediblePages->count())
                     <li class="dropdown">
                         <a href="#"

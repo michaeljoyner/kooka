@@ -1,9 +1,9 @@
 @import "mixins/media";
 @import "variables/colours";
-$navbar-inverse-bg: $primary_dark;
-$navbar-inverse-color: $primary_red;
-$navbar-inverse-link-active-color: $white;
-$navbar-inverse-link-color: $primary_red;
+$navbar-inverse-bg: $brand_green_dark;
+$navbar-inverse-color: $white;
+$navbar-inverse-link-active-color: $brand_orange;
+$navbar-inverse-link-color: $white;
 $navbar-border-radius: 0;
 $font-family-sans-serif: 'Lato', "Helvetica Neue", Helvetica, Arial, sans-serif;
 

@@ -10,7 +10,7 @@
         .login-heading {
             text-align: center;
             text-transform: uppercase;
-            color: #f48054;
+            color: #008058;
         }
     </style>
 @endsection

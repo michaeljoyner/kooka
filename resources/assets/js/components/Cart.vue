@@ -11,9 +11,6 @@
         ></cart-item>
         <a class="checkout-button" href="/checkout" v-show="items.length">Proceed to Checkout</a>
         <p class="sub-heading centered-text" v-else>You don't have any products in your cart.</p>
-        <pre>
-            {{ items }}
-        </pre>
     </div>
 </template>
 

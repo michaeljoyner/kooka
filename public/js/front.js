@@ -13973,7 +13973,7 @@ module.exports = {
     }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"cart-list\">\n    <cart-item v-for=\"item in items\" :product-id=\"item.id\" :product-name=\"item.name\" :thumb=\"item.thumb\" :subtotal=\"item.subtotal\" :product-qty=\"item.quantity\"></cart-item>\n    <a class=\"checkout-button\" href=\"/checkout\" v-show=\"items.length\">Proceed to Checkout</a>\n    <p class=\"sub-heading centered-text\" v-else=\"\">You don't have any products in your cart.</p>\n</div>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"cart-list\">\n    <cart-item v-for=\"item in items\" :product-id=\"item.id\" :product-name=\"item.name\" :thumb=\"item.thumb\" :subtotal=\"item.subtotal\" :product-qty=\"item.quantity\"></cart-item>\n    <a class=\"checkout-button\" href=\"/checkout\" v-show=\"items.length\">Proceed to Checkout</a>\n    <p class=\"sub-heading centered-text\" v-else=\"\">You don't have any products in your cart.</p>\n    <pre>            {{ items }}\n    </pre>\n</div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)

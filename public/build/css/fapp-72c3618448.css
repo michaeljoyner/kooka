@@ -1597,7 +1597,7 @@ section.contact-form {
   .product-show .product-details-container {
     margin-top: 30px;
     margin-bottom: 30px;
-    padding: 0 15px 0 30px;
+    padding: 0 30px 0 30px;
     display: inline-block;
     vertical-align: top;
     -ms-flex-positive: 1;
@@ -1809,7 +1809,7 @@ section.contact-form {
 
 .checkout-help {
   display: inline-block;
-  padding: 0 20px 0 20px;
+  padding: 0 20px 0 30px;
   -ms-flex-positive: 1;
   flex-grow: 1;
   -ms-flex-negative: 1;

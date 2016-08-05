@@ -80,7 +80,7 @@ class Product extends Model implements HasMediaConversions, Breadcrumbable
 
     public function defaultImageSrc()
     {
-        return '/images/assets/default.jpg';
+        return '/images/assets/new_default.jpg';
     }
 
     public function getPriceAttribute($price)

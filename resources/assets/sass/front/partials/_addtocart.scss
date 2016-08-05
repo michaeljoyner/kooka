@@ -18,6 +18,10 @@
     text-transform: uppercase;
     height: 34px;
     vertical-align: top;
+
+    &:hover {
+      background: $brand_green_dark;
+    }
   }
 
 

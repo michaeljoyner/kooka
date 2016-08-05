@@ -45,8 +45,8 @@
                 <p>+27 31 1234 333</p>
             </div>
             <div class="contact-method-box email-box">
-                @include('svgicons.email_icon')
-                <p>ryan@absolutesport.co.za</p>
+                <a href="mailto:ryan@absolutesport.co.za">@include('svgicons.email_icon')
+                <p>ryan@absolutesport.co.za</p></a>
             </div>
             <div class="contact-method-box message-box">
                 <label for="contact-toggle">

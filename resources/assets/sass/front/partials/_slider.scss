@@ -26,12 +26,17 @@
 
   .slick-arrow {
     transform: translateY(-50%);
-    top: 50%;
+    top: 30%;
     position: absolute;
     fill: $brand_green_dark;
     stroke: $brand_green_dark;
     width: 40px;
     z-index: 9000;
+
+    &:hover {
+      fill: $brand_green_soft;
+      stroke: $brand_green_soft;
+    }
 
     @include respond-to(phone) {opacity: .8;}
     @include respond-to(smalltablet) {opacity: .8;}
@@ -72,6 +77,12 @@
       text-overflow: ellipsis;
       margin-top: 20px;
       text-transform: uppercase;
+
+      &:hover {
+        color: $white;
+        border: 2px solid $brand_green_dark;
+        background: $brand_green_dark;
+      }
     }
   }
 }

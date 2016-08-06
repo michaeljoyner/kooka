@@ -16,7 +16,6 @@ Vue.component('carousel', require('./components/Slider.vue'));
 
 window.Vue = Vue;
 window.swal = swal;
-window.lory = require('lory.js').lory;
 
 new Vue({
     el: 'body',

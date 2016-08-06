@@ -2,7 +2,7 @@
 
 @section('head')
     <meta id="x-token" property="CSRF-token" content="{{ Session::token() }}"/>
-
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 @stop
 
 @section('content')
@@ -67,7 +67,20 @@
     </template>
 @endsection
 
-@section('bodyscripts')
+@section('initialscripts')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+@endsection
+
+@section('bodyscripts')
+    @if(session()->has('thanks_message'))
+        <script>
+            swal({
+                type: "success",
+                title: "Thank You, {{ session('thanks_message.name') }}",
+                text: "Thank you for your request. We will get back to you as soon as possible.",
+                showConfirmButton: true
+            });
+        </script>
+    @endif
 @endsection

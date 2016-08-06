@@ -17,6 +17,7 @@ class CheckoutController extends Controller
 
         if($order) {
             $cart->emptyContents();
+            session()->flash('thanks_message', ['name' => $order->customer_name]);
         }
 
         return redirect('/');

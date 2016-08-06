@@ -21,10 +21,10 @@
 </div>
 @include('front.partials.footer')
 
-
-@yield('bodyscripts')
+@yield('initialscripts')
 <script src="{{ elixir('js/front.js') }}"></script>
-<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+@yield('bodyscripts')
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
 <script>
     window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
     ga('create','UA-XXXXX-Y','auto');ga('send','pageview')

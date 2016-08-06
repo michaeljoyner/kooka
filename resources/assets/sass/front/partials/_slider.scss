@@ -45,13 +45,15 @@
   .slick-prev {
     left: -50px;
     @include respond-to(phone) {left: 0;}
-    @include respond-to(smalltablet) {left: 0;}
+    @include respond-to(smalltablet) {left: 10px;}
+    @include respond-to(largetablet) {left: 10px;}
   }
 
   .slick-next {
     right: -50px;
     @include respond-to(phone) {right: 0;}
-    @include respond-to(smalltablet) {right: 0;}
+    @include respond-to(smalltablet) {right: 10px;}
+    @include respond-to(largetablet) {right: 10px;}
   }
 
   .slick-slide {

@@ -6,6 +6,10 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  padding-top: 50px;
+
+  @include respond-to(phone) {padding-top: 80px;}
+  @include respond-to(smalltablet) {padding-top: 80px;}
 
   & > * {
     flex-grow: 0;

@@ -1,8 +1,14 @@
 .main-navbar {
   display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $white;
   height: 50px;
   font-size: 1.3em;
   border-bottom: 3px solid $brand_green_dark;
+  z-index: 99999;
 
   @include respond-to(phone) {flex-direction: column; height: 80px;}
   @include respond-to(smalltablet) {flex-direction: column; height: 80px;}

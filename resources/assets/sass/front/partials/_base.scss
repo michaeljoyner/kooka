@@ -8,8 +8,12 @@ html {
 body {
   margin: 0;
   padding: 0;
+  padding-top: 50px;
   font-family: $primary_font;
   color: $brand_dark;
+
+  @include respond-to(phone) {padding-top: 80px;}
+  @include respond-to(smalltablet) {padding-top: 80px;}
 }
 
 a, a:hover, a:focus, a:visited {

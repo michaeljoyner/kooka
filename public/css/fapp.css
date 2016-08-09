@@ -1942,8 +1942,15 @@ html {
 body {
   margin: 0;
   padding: 0;
+  padding-top: 50px;
   font-family: "Montserrat", sans-serif;
   color: #565656; }
+  @media only screen and (max-width: 425px) {
+    body {
+      padding-top: 80px; } }
+  @media only screen and (min-width: 426px) and (max-width: 767px) {
+    body {
+      padding-top: 80px; } }
 
 a, a:hover, a:focus, a:visited {
   color: inherit;

@@ -13,7 +13,7 @@
                 Contact
             </li>
         </a>
-        <a href="/cart" class="nav-link">
+        <a href="/cart" class="nav-link" id="cart-nav-link">
             <li>
                 Cart
             </li>

@@ -4,19 +4,13 @@
     </div>
     <ul class="nav-list">
         <a href="/#categories" class="nav-link">
-            <li>
-                Shop
-            </li>
+            <li>Shop</li>
         </a>
         <a href="/#contact" class="nav-link">
-            <li>
-                Contact
-            </li>
+            <li>Contact</li>
         </a>
         <a href="/cart" class="nav-link" id="cart-nav-link">
-            <li>
-                Cart
-            </li>
+            <li>Cart</li>
         </a>
         @include('front.partials.cartalert')
     </ul>

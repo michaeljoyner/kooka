@@ -876,8 +876,7 @@ body {
   z-index: 99999; }
   @media only screen and (max-width: 425px) {
     .main-navbar {
-      -ms-flex-direction: column;
-      flex-direction: column;
+      display: block;
       height: 80px; } }
   @media only screen and (min-width: 426px) and (max-width: 767px) {
     .main-navbar {
@@ -898,6 +897,14 @@ body {
     -ms-flex-align: center;
     align-items: center;
     padding-left: 20px; }
+    @media only screen and (max-width: 425px) {
+      .main-navbar .branding-strip {
+        width: 100%;
+        display: block;
+        padding-left: 0;
+        text-align: center;
+        height: 40px;
+        line-height: 40px; } }
   .main-navbar .nav-list {
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
@@ -907,6 +914,11 @@ body {
     margin: 0;
     height: 100%;
     list-style-type: none; }
+    @media only screen and (max-width: 425px) {
+      .main-navbar .nav-list {
+        width: 100%;
+        display: block;
+        font-size: 0; } }
     .main-navbar .nav-list .nav-link {
       -ms-flex-negative: 1;
       flex-shrink: 1;
@@ -925,6 +937,14 @@ body {
       justify-content: center;
       color: #ffffff;
       border-left: 1px solid #008058; }
+      @media only screen and (max-width: 425px) {
+        .main-navbar .nav-list .nav-link {
+          display: inline-block;
+          width: 33.3%;
+          margin: 0;
+          font-size: 20px;
+          height: 38px;
+          line-height: 38px; } }
       .main-navbar .nav-list .nav-link:hover {
         background: #008058; }
       .main-navbar .nav-list .nav-link:nth-child(1) {
@@ -1001,11 +1021,25 @@ body {
   padding: 20px;
   transition: .4s;
   transform: translate3d(-50%, -110%, 0); }
+  @media only screen and (max-width: 425px) {
+    .cart-summary-alert-box {
+      font-size: 16px; } }
   .cart-summary-alert-box.exposed {
     transform: translate3d(-50%, -10%, 0); }
+  .cart-summary-alert-box .btn.go-to-cart-btn {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    background: #84D376;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 80%;
+    padding: 4px 8px; }
 
 #cart-nav-link:hover + .cart-summary-alert-box {
   transform: translate3d(-50%, -10%, 0); }
+  #cart-nav-link:hover + .cart-summary-alert-box .go-to-cart-btn {
+    display: none; }
 
 .spinner {
   margin: 0 auto;

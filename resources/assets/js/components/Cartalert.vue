@@ -5,6 +5,7 @@
         <h3>Your cart</h3>
         <p>{{ product_count }} products /  {{ item_count }} items.</p>
         <p class="cart-subtotal">R{{ subtotal }}</p>
+        <a href="/cart" class="btn go-to-cart-btn">View Cart</a>
     </div>
 </template>
 

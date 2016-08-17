@@ -13181,7 +13181,7 @@ module.exports = {
     }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"cart-summary-alert-box\" :class=\"{'exposed': expose}\">\n    <h3>Your cart</h3>\n    <p>{{ product_count }} products /  {{ item_count }} items.</p>\n    <p class=\"cart-subtotal\">R{{ subtotal }}</p>\n</div>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"cart-summary-alert-box\" :class=\"{'exposed': expose}\">\n    <h3>Your cart</h3>\n    <p>{{ product_count }} products /  {{ item_count }} items.</p>\n    <p class=\"cart-subtotal\">R{{ subtotal }}</p>\n    <a href=\"/cart\" class=\"btn go-to-cart-btn\">View Cart</a>\n</div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)

@@ -10,7 +10,10 @@
   border-bottom: 3px solid $brand_green_dark;
   z-index: 99999;
 
-  @include respond-to(phone) {flex-direction: column; height: 80px;}
+  @include respond-to(phone) {
+    display: block;
+    height: 80px;
+  }
   @include respond-to(smalltablet) {flex-direction: column; height: 80px;}
 
   & > * {
@@ -25,6 +28,15 @@
     display: flex;
     align-items: center;
     padding-left: 20px;
+
+    @include respond-to(phone) {
+      width: 100%;
+      display: block;
+      padding-left: 0;
+      text-align: center;
+      height: 40px;
+      line-height: 40px;
+    }
   }
 
   .nav-list {
@@ -34,6 +46,12 @@
     margin: 0;
     height: 100%;
     list-style-type: none;
+
+    @include respond-to(phone) {
+      width: 100%;
+      display: block;
+      font-size: 0;
+    }
 
     .nav-link {
       flex-shrink: 1;
@@ -48,6 +66,15 @@
       justify-content: center;
       color: $white;
       border-left: 1px solid $brand_green_dark;
+
+      @include respond-to(phone) {
+        display: inline-block;
+        width: 33.3%;
+        margin: 0;
+        font-size: 20px;
+        height: 38px;
+        line-height: 38px;
+      }
 
       &:hover {
         background: $brand_green_dark;

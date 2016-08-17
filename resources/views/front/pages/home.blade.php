@@ -3,7 +3,7 @@
 @section('head')
     <meta id="x-token" property="CSRF-token" content="{{ Session::token() }}"/>
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
-    <meta name="og:image" content="/images/assets/kooka_logo_2.svg"/>
+    <meta name="og:image" content="{{ url("/images/assets/kooka_fb.png") }}"/>
     <meta name="og:url" content="{{ Request::url() }}"/>
     <meta name="og:title" content="Kookaburra Cricket - Bringing Kookaburra direct to your door!"/>
     <meta name="og:site_name" content="Kookaburra Cricket"/>

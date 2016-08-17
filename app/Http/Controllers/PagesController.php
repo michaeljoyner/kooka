@@ -23,13 +23,17 @@ class PagesController extends Controller
         $category = Category::with(['products' => function($query) {
             $query->where('available', 1);
         }])->where('slug', $slug)->first();
-        
+
         return view('front.pages.category')->with(compact('category'));
     }
 
     public function product($slug)
     {
         $product = Product::where('slug', $slug)->firstOrFail();
+
+        if(! $product->available) {
+            return abort(404, "The product you are looking for is not currently available");
+        }
 
         return view('front.pages.product')->with(compact('product'));
     }

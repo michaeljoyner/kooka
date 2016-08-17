@@ -2,6 +2,14 @@
 
 @section('head')
     <meta id="x-token" property="CSRF-token" content="{{ Session::token() }}"/>
+    <meta id="x-token" property="CSRF-token" content="{{ Session::token() }}"/>
+    <meta name="og:image" content="{{ url($product->imageSrc()) }}"/>
+    <meta name="og:url" content="{{ Request::url() }}"/>
+    <meta name="og:title" content="{{ $product->name }} | Kookaburra Cricket"/>
+    <meta name="og:site_name" content="Kookaburra Cricket"/>
+    <meta name="og:type" content="Website"/>
+    <meta name="og:description" content="{{ $product->description }}"/>
+    <meta name="description" content="{{ $product->description }}">
 @stop
 
 @section('content')
@@ -20,7 +28,6 @@
                                  product-id="{{ $product->id }}"
                 >
                 </product-gallery>
-                {{--<img src="" alt="{{ $product->name }}">--}}
             </div>
         </div>
         <div class="product-details-container">

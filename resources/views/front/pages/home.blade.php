@@ -3,6 +3,13 @@
 @section('head')
     <meta id="x-token" property="CSRF-token" content="{{ Session::token() }}"/>
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <meta name="og:image" content="/images/assets/kooka_logo_2.svg"/>
+    <meta name="og:url" content="{{ Request::url() }}"/>
+    <meta name="og:title" content="Kookaburra Cricket - Bringing Kookaburra direct to your door!"/>
+    <meta name="og:site_name" content="Kookaburra Cricket"/>
+    <meta name="og:type" content="Website"/>
+    <meta name="og:description" content="Kookaburra Cricket offers Kookaburra cricket sports equipment for all, delivered directly to your doorstep!"/>
+    <meta name="description" content="Kookaburra Cricket offers Kookaburra cricket sports equipment for all, delivered directly to your doorstep!">
 @stop
 
 @section('content')
@@ -60,11 +67,11 @@
             <contact-form form-action="/contact"></contact-form>
         </section>
     </section>
-    <template>
-        <div id="previous">
-            @include('svg.left_arrow')
-        </div>
-    </template>
+    {{--<template>--}}
+        {{--<div id="previous">--}}
+            {{--@include('svg.left_arrow')--}}
+        {{--</div>--}}
+    {{--</template>--}}
 @endsection
 
 @section('initialscripts')

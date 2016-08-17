@@ -1,5 +1,9 @@
 @extends('front.base')
 
+@section('head')
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+@endsection
+
 @section('content')
     <h1 class="main-heading text-green-hard centered-text">Checkout</h1>
     <section class="checkout-container">

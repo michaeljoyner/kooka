@@ -20,8 +20,10 @@ class PagesController extends Controller
 
     public function category($slug)
     {
-        $category = Category::with('products')->where('slug', $slug)->first();
-
+        $category = Category::with(['products' => function($query) {
+            $query->where('available', 1);
+        }])->where('slug', $slug)->first();
+        
         return view('front.pages.category')->with(compact('category'));
     }
 

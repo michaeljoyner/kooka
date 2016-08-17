@@ -2,6 +2,13 @@
 
 @section('head')
     <meta id="x-token" property="CSRF-token" content="{{ Session::token() }}"/>
+    <meta name="og:image" content="{{ url($category->imageSrc()) }}"/>
+    <meta name="og:url" content="{{ Request::url() }}"/>
+    <meta name="og:title" content="{{ $category->name }} | Kookaburra Cricket"/>
+    <meta name="og:site_name" content="Kookaburra Cricket"/>
+    <meta name="og:type" content="Website"/>
+    <meta name="og:description" content="{{ $category->description }}"/>
+    <meta name="description" content="{{ $category->description }}">
 @stop
 
 @section('content')

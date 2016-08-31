@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\OrderWasPlaced;
 use App\Http\Requests\OrderFormRequest;
 use App\Orders\OrderFactory;
 use App\Shopping\Cart;
@@ -19,6 +20,8 @@ class CheckoutController extends Controller
             $cart->emptyContents();
             session()->flash('thanks_message', ['name' => $order->customer_name]);
         }
+
+        event(new OrderWasPlaced($order));
 
         return redirect('/');
     }

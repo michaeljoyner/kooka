@@ -2,19 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Mailing\AdminMailer;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
 class ContactFormController extends Controller
 {
-    public function handleMessage(Request $request)
+    public function handleMessage(Request $request, AdminMailer $mailer)
     {
-        sleep(5);
         $this->validate($request, [
             'name' => 'required',
             'email' => 'required|email'
         ]);
+
+        $mailer->conveySiteMessage($request->only(['name', 'email', 'enquiry']));
 
         return response()->json('ok');
     }

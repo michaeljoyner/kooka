@@ -15,4 +15,12 @@ Vue.component('dropzone', require('./components/Dropzone.vue'));
 Vue.component('gallery-show', require('./components/Galleryshow.vue'));
 Vue.component('product-search', require('./components/Productsearch.vue'));
 
+Vue.http.interceptors.unshift(function(request, next) {
+    next(function(response) {
+        if(typeof response.headers['content-type'] != 'undefined') {
+            response.headers['Content-Type'] = response.headers['content-type'];
+        }
+    });
+});
+
 window.Vue = Vue;

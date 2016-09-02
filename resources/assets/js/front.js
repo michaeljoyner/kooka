@@ -14,6 +14,14 @@ Vue.component('contact-form', require('./components/Contactform.vue'));
 Vue.component('product-gallery', require('./components/Productgallery.vue'));
 Vue.component('carousel', require('./components/Slider.vue'));
 
+Vue.http.interceptors.unshift(function(request, next) {
+    next(function(response) {
+        if(typeof response.headers['content-type'] != 'undefined') {
+            response.headers['Content-Type'] = response.headers['content-type'];
+        }
+    });
+});
+
 window.Vue = Vue;
 window.swal = swal;
 

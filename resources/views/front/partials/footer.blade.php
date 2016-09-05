@@ -3,7 +3,9 @@
         <h3 class="footer-heading">Follow Us</h3>
         <ul>
             <li>
-                @include('svgicons.fb_icon')
+                <a href="https://www.facebook.com/kookaburadirect/" target="_blank">
+                    @include('svgicons.fb_icon')
+                </a>
             </li>
         </ul>
     </div>

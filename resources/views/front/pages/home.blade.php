@@ -49,7 +49,7 @@
         <section class="contact-panel">
             <div class="contact-method-box phone-box">
                 @include('svgicons.Phone_icon')
-                <p>+27 31 1234 333</p>
+                <p>083 257 9611</p>
             </div>
             <div class="contact-method-box email-box">
                 <a href="mailto:ryan@absolutesport.co.za">@include('svgicons.email_icon')

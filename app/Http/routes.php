@@ -10,26 +10,23 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-//temp closing of site, when ready to rerelease, take all routes out of the group below
-Route::group(['middleware' => 'auth'], function() {
-    Route::get('/', 'PagesController@home');
-    Route::get('categories/{slug}', 'PagesController@category');
-    Route::get('products/{slug}', 'PagesController@product');
-    Route::get('/cart', 'PagesController@cart');
-    Route::get('/checkout', 'PagesController@checkout');
-    Route::post('/checkout', 'CheckoutController@doCheckout');
+Route::get('/', 'PagesController@home');
+Route::get('categories/{slug}', 'PagesController@category');
+Route::get('products/{slug}', 'PagesController@product');
+Route::get('/cart', 'PagesController@cart');
+Route::get('/checkout', 'PagesController@checkout');
+Route::post('/checkout', 'CheckoutController@doCheckout');
 
-    Route::post('/contact', 'ContactFormController@handleMessage');
+Route::post('/contact', 'ContactFormController@handleMessage');
 
-    Route::get('api/products/{product}/images', 'ProductImagesController@index');
+Route::get('api/products/{product}/images', 'ProductImagesController@index');
 
-    //Shopping cart routes
-    Route::get('cart/index', 'ShoppingCartController@index');
-    Route::get('cart/summary', 'ShoppingCartController@summary');
-    Route::post('cart/add', 'ShoppingCartController@add');
-    Route::patch('cart/update', 'ShoppingCartController@update');
-    Route::delete('cart/remove', 'ShoppingCartController@remove');
-});
+//Shopping cart routes
+Route::get('cart/index', 'ShoppingCartController@index');
+Route::get('cart/summary', 'ShoppingCartController@summary');
+Route::post('cart/add', 'ShoppingCartController@add');
+Route::patch('cart/update', 'ShoppingCartController@update');
+Route::delete('cart/remove', 'ShoppingCartController@remove');
 // Page routes
 
 // Authentication Routes...

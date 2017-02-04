@@ -15,7 +15,7 @@
 @section('content')
     <section class="home-section hero">
         <img src="/images/assets/absolutecricket_logo.png" alt="absolute cricket logo" class="logo">
-        <p class="tagline main-heading">BRINGING KOOKABURRA DIRECT TO YOUR DOOR!</p>
+        <p class="tagline main-heading">BRINGING CRICKET DIRECT TO YOUR DOOR!</p>
     </section>
     <section class="home-section top-sellers top-seller-slider">
         <h1 class="main-heading centered-text text-green-hard">Top Sellers</h1>

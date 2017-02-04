@@ -12,5 +12,5 @@
 </div>
 <div class="how-it-works">
     @include('svg.howto4')
-    <p>Kookaburra Direct will get back to you to finalise the order.</p>
+    <p>Absolute Cricket will get back to you to finalise the order.</p>
 </div>

@@ -1,6 +1,6 @@
 <nav class="main-navbar">
     <div class="branding-strip">
-        <a href="/"><span class="text-blue">Kookaburra</span><span class="text-green-soft">Cricket.co.za</span></a>
+        <a href="/"><span class="text-blue">Absolute</span><span class="text-green-soft">Cricket.co.za</span></a>
     </div>
     <ul class="nav-list">
         <a href="/#categories" class="nav-link">

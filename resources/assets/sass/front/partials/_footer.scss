@@ -1,11 +1,13 @@
 .main-footer {
   width: 100%;
-  padding: 30px 0;
+  padding: 80px 0;
   background: $brand_green_soft;
   display: flex;
   flex-direction: column;
   align-content: center;
-  background-image: url(../../images/assets/footer_bg_pattern.png);
+  background-image: url(../../images/assets/kooka_pattern2.png);
+  background-size: cover;
+  background-position-y: -12px;
   
   & > * {
     flex-grow: 0;
